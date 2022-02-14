@@ -1,4 +1,8 @@
-<header id="main-header" class="py-2 bg-info text-white">
+<header
+  id="main-header"
+  class="py-2 text-white"
+  style="background-color: cadetblue"
+>
   <div class="container">
     <div class="row">
       <div class="col-md-6">
@@ -35,24 +39,26 @@
       <div class="col">
         <div class="card">
           <div class="card-header">
-            <h4>Editar configuaración</h4>
+            <h4>Editar configuración</h4>
           </div>
           <div class="card-body">
-            <fieldset class="form-group">
-              <legend>Permitir registro de usuarios</legend>
-              <div class="form-check">
-                <label class="form-check-label">
-                  <input
-                    type="checkbox"
-                    class="form-check-input"
-                    name="permitirRegistro"
-                    [(ngModel)]="permitirRegistro"
-                    [checked]="permitirRegistro"
-                  />
-                  {{ permitirRegistro ? "Sí" : "No" }}
-                </label>
-              </div>
-            </fieldset>
+            <form>
+              <fieldset class="form-group">
+                <legend>Permitir registro de usuarios</legend>
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input
+                      type="checkbox"
+                      class="form-check-input"
+                      name="permitirRegistro"
+                      [(ngModel)]="permitirRegistro"
+                      [checked]="permitirRegistro"
+                    />
+                    {{ permitirRegistro ? "Sí" : "No" }}
+                  </label>
+                </div>
+              </fieldset>
+            </form>
           </div>
         </div>
       </div>

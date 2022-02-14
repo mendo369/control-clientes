@@ -1,0 +1,31 @@
+#title {
+  color: cadetblue;
+  font-weight: bold;
+}
+
+nav {
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar-nav {
+  visibility: visible;
+  display: grid;
+  align-items: center;
+  grid-auto-flow: column;
+  grid-template-columns: max-content;
+  gap: 1em;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: cadetblue;
+  font-size: 1.2rem;
+}
+
+.nav-link:hover {
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 0 3px;
+}
