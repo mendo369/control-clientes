@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { FlashMessagesService } from 'angular2-flash-messages';
 import { LoginService } from 'src/app/services/login-service';
 
 @Component({
@@ -14,7 +13,6 @@ export class RegistroComponent implements OnInit {
   password: string;
 
   constructor(private router: Router,
-    private flashMessages: FlashMessagesService,
     private loginService: LoginService) { }
 
   ngOnInit(): void {
@@ -34,7 +32,7 @@ export class RegistroComponent implements OnInit {
       }
     ).catch(
       error => {
-        this.flashMessages.show(error.message, { cssClass: 'alert-danger', timeout: 4000 })
+        console.log(error)
       }
     )
   }

@@ -1,5 +1,4 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { FlashMessagesService } from 'angular2-flash-messages';
 import { Cliente } from 'src/app/models/cliente.model';
 import { ClienteService } from 'src/app/services/cliente.service';
 import { NgForm } from '@angular/forms';
@@ -22,8 +21,7 @@ export class ClientesComponent implements OnInit {
   @ViewChild("clienteForm") clienteForm: NgForm;
   @ViewChild("botonCerrar") botonCerrar: ElementRef;
 
-  constructor(private clienteService: ClienteService,
-    private falshMessages: FlashMessagesService
+  constructor(private clienteService: ClienteService
   ) { }
 
   ngOnInit(): void {
@@ -46,7 +44,7 @@ export class ClientesComponent implements OnInit {
 
   agregar(f: NgForm) {
     if (!f.valid) {
-      this.falshMessages.show('Por favor llene el formulario correctamente', { cssClass: 'alert-danger', timeout: 4000 })
+      alert('llenar el formulario correctamente');
     }
     else {
       this.clienteService.agregarCliente(f.value);

@@ -10,7 +10,7 @@ import { ConfiguracionService } from 'src/app/services/configuracion.service';
 })
 export class ConfiguracionComponent implements OnInit {
 
-  permitirRegistro = false;
+  permitirRegistro: boolean;
 
   constructor(
     private router: Router,

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { FlashMessagesService } from 'angular2-flash-messages';
 import { Cliente } from 'src/app/models/cliente.model';
 import { ClienteService } from 'src/app/services/cliente.service';
 
@@ -23,7 +22,6 @@ export class EditarClienteComponent implements OnInit {
   id: string;
 
   constructor(private clienteService: ClienteService,
-    private falshMessages: FlashMessagesService,
     private router: Router,
     private route: ActivatedRoute
   ) { }
@@ -37,7 +35,7 @@ export class EditarClienteComponent implements OnInit {
 
   guardar(f: NgForm) {
     if (!f.valid) {
-      this.falshMessages.show('Por favor llena el formulario correctamente', { cssClass: 'alert-danger', timeout: 4000 });
+      console.log('llenar el formulario correctamente')
     }
     else {
       f.value.id = this.id;

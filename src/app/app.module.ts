@@ -4,8 +4,7 @@ import { environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFirestoreModule, Settings } from '@angular/fire/compat/firestore';
-import { FlashMessagesModule } from 'angular2-flash-messages';
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -43,8 +42,7 @@ import { ConfiguracionGuard } from './guards/configuracion.guard';
     AngularFireModule.initializeApp(environment.firestore, 'control-clientes'),
     AngularFirestoreModule,
     AngularFireAuthModule,
-    FormsModule,
-    FlashMessagesModule.forRoot()
+    FormsModule
   ],
   providers: [ClienteService,
     LoginService, ConfiguracionService, AuthGuard, ConfiguracionGuard],
